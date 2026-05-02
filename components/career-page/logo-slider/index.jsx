@@ -10,43 +10,43 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 const sliderData = [
 	{
-		id: crypto.randomUUID(),
+		id: 1,
 		img: Waverio,
 	},
 	{
-		id: crypto.randomUUID(),
+		id: 2,
 		img: Logoipsum,
 	},
 	{
-		id: crypto.randomUUID(),
+		id: 3,
 		img: Alterbone,
 	},
 	{
-		id: crypto.randomUUID(),
+		id: 4,
 		img: Carbonia,
 	},
 	{
-		id: crypto.randomUUID(),
+		id: 5,
 		img: Tinygone,
 	},
 	{
-		id: crypto.randomUUID(),
+		id: 6,
 		img: Waverio,
 	},
 	{
-		id: crypto.randomUUID(),
+		id: 7,
 		img: Logoipsum,
 	},
 	{
-		id: crypto.randomUUID(),
+		id: 8,
 		img: Alterbone,
 	},
 	{
-		id: crypto.randomUUID(),
+		id: 9,
 		img: Carbonia,
 	},
 	{
-		id: crypto.randomUUID(),
+		id: 10,
 		img: Tinygone,
 	},
 ];

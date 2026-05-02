@@ -378,6 +378,14 @@
 	letter-spacing: normal;
 	position: relative;
 	font-family: var(--font-DM-Sans), sans-serif;
+	transition: all 0.3s ease;
+	border-radius: 8px;
+	padding: 8px 16px;
+}
+
+.site-menu-main .nav-link-item:hover {
+	background-color: #279679;
+	color: white !important;
 }
 
 .sofax-header1 .site-menu-main .nav-link-item {
@@ -398,10 +406,7 @@
 
 @media (min-width: 992px) {
 	.site-menu-main .nav-link-item {
-		padding-top: 15px !important;
-		padding-bottom: 15px !important;
-		padding-left: 16px !important;
-		padding-right: 16px !important;
+		padding: 15px 16px !important;
 	}
 }
 
@@ -412,19 +417,103 @@
 .site-menu-main .sub-menu {
 	z-index: 500;
 	background-color: #fff;
-	box-shadow: -2px 2px 70px -25px rgb(0 0 0 / 30%);
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
 	position: absolute;
 	left: 0;
-	top: 61px;
+	top: 100%;
 	margin: 0;
-	padding: 12px 0;
+	padding: 0;
 	transition: 0.4s;
 	z-index: 4;
 	transform: translatey(20px);
 	opacity: 0;
 	visibility: hidden;
-	min-width: 205px;
+	width: 100vw;
+	height: 50vh;
+	border-radius: 12px;
+	border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.dropdown-content {
+	display: flex;
+	align-items: stretch;
+	justify-content: flex-start;
+	padding: 20px;
+	width: 100%;
+}
+
+.promo-container {
+	border-radius: 12px;
+	padding: 20px;
+	display: flex;
+	align-items: stretch;
+	width: 100%;
+	height: auto;
+}
+
+.promo-left {
+	flex: 0 0 300px;
+	padding-right: 20px;
+	background-color: #fff;
+	border-top-left-radius: 12px;
+	border-bottom-left-radius: 12px;
+}
+
+.promo-right {
+	flex: 1;
+	padding-left: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: #e8f5e8;
+	border-top-right-radius: 12px;
+	border-bottom-right-radius: 12px;
+}
+
+.promo-content {
+	margin-bottom: 20px;
+}
+
+.promo-content h3 {
+	color: #279679;
+	font-size: 20px;
+	font-weight: 700;
+	margin-bottom: 10px;
+	line-height: 1.3;
+}
+
+.promo-content p {
+	color: #555;
+	font-size: 14px;
+	margin-bottom: 15px;
+	line-height: 1.4;
+}
+
+.promo-button {
+	background-color: #279679;
+	color: white;
+	border: none;
+	padding: 10px 24px;
 	border-radius: 6px;
+	font-size: 14px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.promo-button:hover {
+	background-color: #1f7a5f;
+	transform: translateY(-2px);
+}
+
+.promo-image {
+	max-width: 90%;
+	max-height: 160px;
+	height: auto;
+	border-radius: 8px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	object-fit: cover;
+	margin-left: -20px;
 }
 
 .site-menu-main .sub-menu:before {
@@ -480,12 +569,53 @@
 	}
 }
 
+.site-menu-main .sub-menu--item {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
 .site-menu-main .sub-menu--item > a {
-	color: inherit;
-	padding: 4px 20px;
-	font-weight: 700;
-	color: #000;
+	color: #333;
+	padding: 12px 24px;
+	font-weight: 500;
 	position: relative;
+	display: flex;
+	align-items: center;
+	transition: all 0.2s ease;
+	text-decoration: none;
+}
+
+.site-menu-main .sub-menu--item > a:hover {
+	background-color: #f8f9fa;
+	color: #279679;
+}
+
+.dropdown-icon {
+	margin-right: 12px;
+	font-size: 16px;
+	width: 20px;
+	text-align: center;
+}
+
+.dropdown-icon[data-page="Home"]::before {
+	content: "🏠";
+}
+
+.dropdown-icon[data-page="About Us"]::before {
+	content: "ℹ️";
+}
+
+.dropdown-icon[data-page="Pricing"]::before {
+	content: "💰";
+}
+
+.dropdown-icon[data-page="Blog"]::before {
+	content: "📝";
+}
+
+.dropdown-icon[data-page="Contact Us"]::before {
+	content: "📧";
 }
 
 .site-menu-main .sub-menu--item > a .menu-item-text {

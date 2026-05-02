@@ -7,9 +7,32 @@ function DesktopMenu() {
 		<DesktopNav>
 
 			<NavItem url="/">Home</NavItem>
-			<NavItem url="about-us">About Us</NavItem>
-			<NavItem url="pricing">Pricing</NavItem>
-			<NavItem url="blog">Blog</NavItem>
+			<NavItem url="/about-us">About Us</NavItem>
+			<NavItem url="/pricing">Pricing</NavItem>
+			<NavItem dropdown title="Pages">
+				<Dropdown>
+					<div className="dropdown-content">
+						<div className="promo-container">
+							<div className="promo-left">
+								<DropdownItem url="/">Home</DropdownItem>
+								<DropdownItem url="/about-us">About Us</DropdownItem>
+								<DropdownItem url="/pricing">Pricing</DropdownItem>
+								<DropdownItem url="/blogs">Blog</DropdownItem>
+								<DropdownItem url="/contact">Contact Us</DropdownItem>
+							</div>
+							<div className="promo-right">
+								<div className="promo-content">
+									<h3>See Messegy In Action With A Personalized Demo!</h3>
+									<p>Discover how our WhatsApp Business Platform can transform your customer communication</p>
+									<button className="promo-button">Book Now</button>
+								</div>
+								<img src="/images/about/aboutthumb.png" alt="Pages" className="promo-image" />
+							</div>
+						</div>
+					</div>
+				</Dropdown>
+			</NavItem>
+			<NavItem url="/blogs">Blog</NavItem>
 			{/* <NavItem dropdown title="Pages">
 				<Dropdown>
 					<DropdownItem url="about-us">About Us</DropdownItem>
@@ -62,7 +85,7 @@ function DesktopMenu() {
 				</Dropdown>
 			</NavItem> */}
 
-			<NavItem url="contact-us">Contact Us</NavItem>
+			<NavItem url="/contact">Contact Us</NavItem>
 		</DesktopNav>
 	);
 }

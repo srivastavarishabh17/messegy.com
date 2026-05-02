@@ -32,7 +32,7 @@ function PricingCard({ pricing: { plan, price, img, features, highlighted, featu
 				</ul>
 			</div>
 			<div className="sofax-pricing-footer">
-				<Link className={`sofax-default-btn  d-block pill ${!highlighted && "outline-btn"}`} href="/contact-us">
+				<Link className={`sofax-default-btn  d-block pill ${!highlighted && "outline-btn"}`} href="/contact">
 					Purchase now
 				</Link>
 			</div>

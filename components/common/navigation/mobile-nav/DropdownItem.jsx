@@ -56,7 +56,7 @@ const DropdownItem = ({ items, depthLevel, showMenu, setShowMenu }) => {
 		</li>
 	) : (
 		<li className="nav-item sub-menu-item" onClick={closeDropdown}>
-			<Link href={`/${items.url}`}>{items.title}</Link>
+			<Link href={items.url}>{items.title}</Link>
 		</li>
 	);
 };

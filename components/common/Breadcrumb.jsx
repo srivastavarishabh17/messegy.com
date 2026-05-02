@@ -1,20 +1,21 @@
 import Arrow from "@/public/images/about/arrow.png";
 import Image from "next/image";
 import Link from "next/link";
+
 function BreadCrumb({ title }) {
 	return (
-		<div className="sofax-breadcrumb">
+		<div className="page-header-breadcrumb">
 			<div className="container">
-				<h1 className="post__title">{title}</h1>
-				<nav className="breadcrumbs">
+				<h1 className="page-title">{title}</h1>
+				<nav className="breadcrumb-nav">
 					<ul>
 						<li>
 							<Link href="/">Home</Link>
 						</li>
 						<li>
-							<Image src={Arrow} alt="arrow" />
+							<Image src={Arrow} alt="arrow" className="breadcrumb-arrow" />
 						</li>
-						<li aria-current="page"> {title}</li>
+						<li className="current-page" aria-current="page">{title}</li>
 					</ul>
 				</nav>
 			</div>

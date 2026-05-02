@@ -2,7 +2,7 @@
 import Link from "next/link";
 import ArrowDown from "./ArrowDown";
 function DropdownItem({ dropdown, children, title, url }) {
-	const urlFormated = url !== "/" ? `/${url}` : "/";
+	const urlFormated = url;
 	return dropdown ? (
 		<li className="sub-menu--item nav-item-has-children">
 			<a href="#" data-menu-get="h3" className="drop-trigger">
@@ -13,6 +13,7 @@ function DropdownItem({ dropdown, children, title, url }) {
 	) : (
 		<li className="sub-menu--item">
 			<Link href={urlFormated}>
+				<span className="dropdown-icon" data-page={children}></span>
 				<span className="menu-item-text">{children}</span>
 			</Link>
 		</li>

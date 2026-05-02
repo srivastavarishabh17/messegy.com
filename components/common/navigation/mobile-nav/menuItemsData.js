@@ -99,7 +99,7 @@ export const menuItemsData = [
 	},
 	{
 		title: "About Us",
-		url: "about-us",
+		url: "/about-us",
 	},
 	{
 		title: "Pages",
@@ -107,11 +107,11 @@ export const menuItemsData = [
 		submenu: [
 			{
 				title: "About Us",
-				url: "about-us",
+				url: "/about-us",
 			},
 			{
 				title: "Pricing",
-				url: "pricing",
+				url: "/pricing",
 			},
 			{
 				title: "Blog",
@@ -119,7 +119,7 @@ export const menuItemsData = [
 				submenu: [
 					{
 						title: "Our Blog",
-						url: "blog",
+						url: "/blogs",
 					},
 					{
 						title: "Blog Details",
@@ -190,7 +190,7 @@ export const menuItemsData = [
 				submenu: [
 					{
 						title: "Faq",
-						url: "faq",
+						url: "/faq",
 					},
 					{
 						title: "Error 404",
@@ -213,11 +213,11 @@ export const menuItemsData = [
 				submenu: [
 					{
 						title: "Sign Up",
-						url: "sign-up",
+						url: "/register",
 					},
 					{
 						title: "Sign In",
-						url: "sign-in",
+						url: "/login",
 					},
 					{
 						title: "Reset Password",
@@ -229,11 +229,11 @@ export const menuItemsData = [
 	},
 	{
 		title: "Blog",
-		url: "blog",
+		url: "/blogs",
 		submenu: [
 			{
 				title: "Blog",
-				url: "blog",
+				url: "/blogs",
 			},
 
 			{
@@ -244,6 +244,6 @@ export const menuItemsData = [
 	},
 	{
 		title: "Contact Us",
-		url: "contact-us",
+		url: "/contact",
 	},
 ];

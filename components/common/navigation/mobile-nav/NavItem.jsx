@@ -56,7 +56,7 @@ const NavItem = ({ items, depthLevel, showMenu, setShowMenu, onePage }) => {
 		</li>
 	) : (
 		<li className="nav-item" onClick={closeDropdown}>
-			{onePage ? <a href={items.url}>{items.title}</a> : <Link href={`/${items.url}`}>{items.title}</Link>}
+			{onePage ? <a href={items.url}>{items.title}</a> : <Link href={items.url}>{items.title}</Link>}
 		</li>
 	);
 };

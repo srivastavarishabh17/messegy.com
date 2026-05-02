@@ -9,41 +9,41 @@ import ServiceCard from "./ServiceCard";
 
 const servicesData = [
 	{
-		id: crypto.randomUUID(),
+		id: 1,
 		title: "User Interface/Experience",
 		description:
 			"UI & UX are crucial aspects of design digital products & services. UI refers to the visual elements that users.",
 		icon: image1,
 	},
 	{
-		id: crypto.randomUUID(),
+		id: 2,
 		title: "Search Engine Optimization",
 		description:
 			"The goal of SEO to increase organic (non-paid) traffic website by ranking higher in search engine results.",
 		icon: image2,
 	},
 	{
-		id: crypto.randomUUID(),
+		id: 3,
 		title: "Performance Management",
 		description: "Process designed to continuously is a monitor measure & enhance the performance of individuals.",
 		icon: image3,
 	},
 	{
-		id: crypto.randomUUID(),
+		id: 4,
 		title: "Leadership Development",
 		description:
 			"The process of the enhancing ablities skill and quqlities of the individuals to become effective to leaders.",
 		icon: image4,
 	},
 	{
-		id: crypto.randomUUID(),
+		id: 5,
 		title: "Training & Development",
 		description:
 			"Involves assessing the skills equired for various roles the organization and identifying gaps between current.",
 		icon: image5,
 	},
 	{
-		id: crypto.randomUUID(),
+		id: 6,
 		title: "Resource Allocation",
 		description:
 			"Assessing requirements of projects to initiatives or operational activities or determine the types & quantities.",

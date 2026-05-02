@@ -115,10 +115,10 @@ function Footer() {
 							<div className="sofax-footer-menu ml-100">
 								<h5>Company</h5>
 								<ul>
-									<li><Link href="/about">About</Link></li>
-									<li><Link href="/contact-us">Contact</Link></li>
-									<li><Link href="/privacy-policy">Privacy Policy</Link></li>
-									<li><Link href="/terms-and-condition">Terms & Conditions</Link></li>
+									<li><Link href="/about-us">About</Link></li>
+									<li><Link href="/contact">Contact</Link></li>
+									<li><Link href="/policies/refund-policy">Refund Policy</Link></li>
+									<li><Link href="/policies/whatsapp-policy">WhatsApp Policy</Link></li>
 								</ul>
 							</div>
 						</div>
@@ -128,9 +128,9 @@ function Footer() {
 							<div className="sofax-footer-menu ml-50">
 								<h5>Product</h5>
 								<ul>
-									<li><Link href="/features">Features</Link></li>
+									<li><Link href="/blogs">Blog</Link></li>
 									<li><Link href="/pricing">Pricing</Link></li>
-									<li><Link href="/integrations">Integrations</Link></li>
+									<li><Link href="/faq">FAQ</Link></li>
 									<li><Link target="_blank" href="https://docs.messegy.com">API</Link></li>
 								</ul>
 							</div>

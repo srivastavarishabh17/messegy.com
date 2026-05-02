@@ -8,55 +8,54 @@ import image6 from "@/public/images/about/image6.png";
 import image7 from "@/public/images/about/image7.png";
 import image8 from "@/public/images/about/image8.png";
 import Thumb from "@/public/images/career/thumb1.png";
-import mixitup from "mixitup";
 import Image from "next/image";
 import { useEffect } from "react";
 
 const teamMembers = [
 	{
-		id: crypto.randomUUID(),
+		id: 1,
 		name: "Jonathon Marics",
 		title: "Founder & CEO",
 		image: image1,
 	},
 	{
-		id: crypto.randomUUID(),
+		id: 2,
 		name: "Sellimers Terrony",
 		title: "Marketing expert",
 		image: image5,
 	},
 	{
-		id: crypto.randomUUID(),
+		id: 3,
 		name: "Helmioll Vesters",
 		title: "Chief financial officer",
 		image: image2,
 	},
 	{
-		id: crypto.randomUUID(),
+		id: 4,
 		name: "Elimerson Sanvry",
 		title: "Chief executive officer",
 		image: image6,
 	},
 	{
-		id: crypto.randomUUID(),
+		id: 5,
 		name: "Willemor Smilty",
 		title: "Chief Strategy Officer",
 		image: image3,
 	},
 	{
-		id: crypto.randomUUID(),
+		id: 6,
 		name: "Ferroliam Centrl",
 		title: "Creative director",
 		image: image7,
 	},
 	{
-		id: crypto.randomUUID(),
+		id: 7,
 		name: "Amillen Canver",
 		title: "Director of HR",
 		image: image4,
 	},
 	{
-		id: crypto.randomUUID(),
+		id: 8,
 		name: "Jovenners Willom",
 		title: "Market researcher",
 		image: image8,
@@ -65,26 +64,33 @@ const teamMembers = [
 
 function Career() {
 	useEffect(() => {
-		mixitup(".sofax-portfolio-column", {
-			selectors: {
-				target: ".mix",
-			},
-			animation: {
-				duration: 500,
-			},
-		});
+		// Dynamically import mixitup only on client side
+		const initMixitup = async () => {
+			if (typeof window !== 'undefined') {
+				const mixitup = (await import('mixitup')).default;
+				mixitup(".sofax-portfolio-column", {
+					selectors: {
+						target: ".mix",
+					},
+					animation: {
+						duration: 500,
+					},
+				});
+			}
+		};
+		initMixitup();
 	}, []);
 
 	return (
 		<section className="sofax-section-padding2">
-			<div className="container">
+			<div className="container-fluid">
 				<div className="sofax-section-title">
-					<div className="row">
-						<div className="col-xl-6 col-lg-8">
+					<div>
+						<div>
 							<h2>Build your career with us for success</h2>
 						</div>
-						<div className="col-xl-6 col-lg-4 d-flex justify-content-end align-items-center">
-							<div className="sofax-aboutus-content-text ">
+						<div>
+							<div className="sofax-aboutus-content-text">
 								<p>
 									Start your journey with our company and strengthen to your career, now join us with
 									our company.
@@ -93,10 +99,10 @@ function Career() {
 						</div>
 					</div>
 				</div>
-				<div className="sofax-career-thumb ">
+				<div className="sofax-career-thumb">
 					<Image src={Thumb} alt="Thumb" />
 				</div>
-				<div className="sofax-section-title center max-width-large">
+				<div className="sofax-section-title max-width-large">
 					<h2>Curently open positions</h2>
 					<div className="sofax-portfolio-menu extra-mt">
 						<ul className="option-set clear-both controls">
