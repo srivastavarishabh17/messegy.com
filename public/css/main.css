@@ -152,16 +152,16 @@
 }
 
 @media (min-width: 992px) {
-	.site-header > .container-fluid .sub-menu.megamenu {
-		left: 50%;
-		transform: translateX(-50%) translateY(10px);
+	.site-header > .container .sub-menu.megamenu {
+		left: 25% !important;
+		transform: translateX(-50%) translateY(10px) !important;
 	}
 }
 
 @media (min-width: 992px) {
-	.site-header > .container-fluid .nav-item.has-megamenu:hover > .sub-menu {
-		transform: translateX(-50%) translateY(-10px);
-		left: 50%;
+	.site-header > .container .nav-item.has-megamenu:hover > .sub-menu {
+		transform: translateX(-50%) translateY(-10px) !important;
+		left: 25% !important;
 	}
 }
 
@@ -452,7 +452,7 @@
 }
 
 .promo-left {
-	flex: 0 0 300px;
+	flex: 0 0 200px;
 	padding-right: 20px;
 	background-color: #fff;
 	border-top-left-radius: 12px;
@@ -579,43 +579,44 @@
 	color: #333;
 	padding: 12px 24px;
 	font-weight: 500;
-	position: relative;
 	display: flex;
 	align-items: center;
+	gap: 0;
 	transition: all 0.2s ease;
 	text-decoration: none;
 }
 
 .site-menu-main .sub-menu--item > a:hover {
-	background-color: #f8f9fa;
+	background-color: rgba(39, 150, 121, 0.25);
 	color: #279679;
 }
 
+.site-menu-main .sub-menu--item > a:hover .dropdown-icon {
+	color: #279679;
+	transform: scale(1.05);
+	background-color: rgba(39, 150, 121, 0.2);
+}
+
 .dropdown-icon {
-	margin-right: 12px;
-	font-size: 16px;
-	width: 20px;
+	margin-right: 8px;
+	font-size: 18px;
+	width: 32px;
+	height: 32px;
 	text-align: center;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	color: #279679;
+	transition: all 0.3s ease;
+	padding: 6px;
+	background-color: rgba(39, 150, 121, 0.2);
+	border-radius: 8px;
 }
 
-.dropdown-icon[data-page="Home"]::before {
-	content: "🏠";
-}
-
-.dropdown-icon[data-page="About Us"]::before {
-	content: "ℹ️";
-}
-
-.dropdown-icon[data-page="Pricing"]::before {
-	content: "💰";
-}
-
-.dropdown-icon[data-page="Blog"]::before {
-	content: "📝";
-}
-
-.dropdown-icon[data-page="Contact Us"]::before {
-	content: "📧";
+.dropdown-icon svg {
+	width: 20px;
+	height: 20px;
+	transform: translateY(-4px);
 }
 
 .site-menu-main .sub-menu--item > a .menu-item-text {
@@ -624,21 +625,11 @@
 }
 
 .site-menu-main .sub-menu--item > a .menu-item-text::after {
-	content: "";
-	position: absolute;
-	bottom: 0;
-	left: auto;
-	right: 0;
-	height: 2px;
-	width: 0;
-	background-color: #202030;
-	transition: all 0.3s ease;
+	display: none;
 }
 
 .site-menu-main .sub-menu--item > a:hover .menu-item-text::after {
-	left: 0;
-	right: auto;
-	width: 100%;
+	display: none;
 }
 
 @media (min-width: 992px) {
@@ -671,10 +662,13 @@
 	.site-menu-main .sub-menu.megamenu {
 		padding: 30px;
 		min-width: 925px;
-		left: 50%;
-		transform: translateX(-50%) translateY(10px);
-		will-change: transform;
+		left: 25% !important;
+		transform: translateX(-50%) translateY(10px) !important;
 		top: 100%;
+		visibility: hidden;
+		opacity: 0;
+		position: absolute;
+		pointer-events: none;
 		box-shadow: 0 42px 54px rgba(0, 0, 0, 0.09);
 		border: 1px solid #e7e9ed;
 		border-radius: 8px;
@@ -786,8 +780,19 @@
 }
 
 .site-menu-main > li .sub-menu.mega-menu {
-	left: 50%;
-	transform: translateX(-50%);
+	left: 25% !important;
+	transform: translateX(-50%) !important;
+}
+
+/* More specific rule to override dropdown positioning */
+.site-header .container .site-menu-main > li.nav-item-has-children > .sub-menu.megamenu {
+	left: 20% !important;
+	transform: translateX(-50%) !important;
+}
+
+.site-header .container .site-menu-main > li.nav-item-has-children:hover > .sub-menu.megamenu {
+	left: 20% !important;
+	transform: translateX(-50%) translateY(-10px) !important;
 }
 
 /* .mobile-menu-head,
@@ -1492,3 +1497,22 @@ a.log-in-btn:hover:after {
 .sofax-testimonial-wrapperv7 {
 	padding: 20px;
 } */
+
+/* Full-width dropdown overrides */
+@media (min-width: 992px) {
+	.site-menu-main .sub-menu.megamenu[style*="width: 100vw"] {
+		min-width: 100vw !important;
+		width: 100vw !important;
+		left: 0 !important;
+		transform: translateX(0) !important;
+		margin-left: 0 !important;
+		position: fixed !important;
+		right: 0 !important;
+	}
+	
+	.site-menu-main .nav-item-has-children:hover > .sub-menu.megamenu[style*="width: 100vw"] {
+		left: 0 !important;
+		transform: translateX(0) translateY(-10px) !important;
+		margin-left: 0 !important;
+	}
+}

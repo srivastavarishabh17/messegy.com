@@ -1,0 +1,27 @@
+HERO BACKGROUND IMAGE
+=====================
+
+Add your background image here:
+- File name: hero-bg.jpg (or .png)
+- Path: /public/images/hero-bg.jpg
+- Recommended size: 1920x1080 or larger
+- Style: Dark/moody background for text readability
+
+This image serves as:
+1. Poster/thumbnail before video loads
+2. Fallback if video fails to load
+3. Background if no video exists
+
+SUGGESTED IMAGE TYPES:
+======================
+- Dark office/workspace with people
+- Abstract dark gradient
+- Technology-themed dark background
+- WhatsApp/chat themed imagery (dark)
+- Professional business setting (blurred/dark)
+
+FREE IMAGE SOURCES:
+===================
+- Unsplash.com - Search: "dark office", "technology dark", "abstract dark"
+- Pexels.com - Search: "business background", "dark gradient"
+- Pixabay.com - Search: "technology dark background"

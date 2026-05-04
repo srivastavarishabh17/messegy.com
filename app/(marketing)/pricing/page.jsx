@@ -1,5 +1,5 @@
 "use client";
-import Services from "@/components/service-page/services";
+import WhatsAppPricing from "@/components/pricing/WhatsAppPricing";
 import Header from "@/components/home/home-one/header/multi-page";
 import Footer from "@/components/home/home-one/footer/index";
 import BreadCrumb from "@/components/common/Breadcrumb";
@@ -9,7 +9,7 @@ export default function PricingPage() {
     <>
       <Header />
       <BreadCrumb title="Pricing" />
-      <Services />
+      <WhatsAppPricing />
       <Footer />
     </>
   );
