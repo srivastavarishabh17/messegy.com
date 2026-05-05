@@ -1,249 +1,196 @@
 export const menuItemsData = [
 	{
-		title: "Demos",
+		title: "Products",
 		url: "#",
 		submenu: [
 			{
-				title: "Multi-Page",
+				title: "Core Platform",
 				url: "#",
 				submenu: [
 					{
-						title: "Sales Management",
-						url: "multi-page/home-one",
+						title: "WhatsApp Business API",
+						url: "/whatsapp-business-api",
 					},
 					{
-						title: "Crypto App",
-						url: "multi-page/home-two",
+						title: "WhatsApp Cloud Hosting",
+						url: "/whatsapp-cloud-hosting",
 					},
 					{
-						title: "Team Management",
-						url: "multi-page/home-three",
-					},
-					{
-						title: "Socail Agency",
-						url: "multi-page/home-four",
-					},
-					{
-						title: "Digital Agency",
-						url: "multi-page/home-five",
-					},
-					{
-						title: "CRM",
-						url: "multi-page/home-six",
-					},
-					{
-						title: "AI SaaS",
-						url: "multi-page/home-seven",
-					},
-					{
-						title: "AT Service",
-						url: "multi-page/home-eight",
-					},
-					{
-						title: "Email Marketing",
-						url: "multi-page/home-nine",
-					},
-					{
-						title: "Web Hosting",
-						url: "multi-page/home-ten",
+						title: "Shared Team Inbox",
+						url: "/shared-team-inbox",
 					},
 				],
 			},
 			{
-				title: "One-Page",
+				title: "Marketing",
 				url: "#",
 				submenu: [
 					{
-						title: "Sales Management",
-						url: "one-page/home-one",
+						title: "Campaigns / Broadcast",
+						url: "/campaigns-broadcast",
 					},
 					{
-						title: "Crypto App",
-						url: "one-page/home-two",
+						title: "Click-to-WhatsApp Ads",
+						url: "/click-to-whatsapp-ads",
 					},
 					{
-						title: "Team Management",
-						url: "one-page/home-three",
+						title: "WhatsApp Link Generator",
+						url: "/whatsapp-link-generator",
+					},
+				],
+			},
+			{
+				title: "Automation",
+				url: "#",
+				submenu: [
+					{
+						title: "Chatbot Builder",
+						url: "/chatbot-builder",
 					},
 					{
-						title: "Socail Agency",
-						url: "one-page/home-four",
+						title: "AI Auto Replies",
+						url: "/ai-auto-replies",
 					},
 					{
-						title: "Digital Agency",
-						url: "one-page/home-five",
-					},
-					{
-						title: "CRM",
-						url: "one-page/home-six",
-					},
-					{
-						title: "AI SaaS",
-						url: "one-page/home-seven",
-					},
-					{
-						title: "AT Service",
-						url: "one-page/home-eight",
-					},
-					{
-						title: "Email Marketing",
-						url: "one-page/home-nine",
-					},
-					{
-						title: "Web Hosting",
-						url: "one-page/home-ten",
+						title: "WhatsApp Button Generator",
+						url: "/whatsapp-button-generator",
 					},
 				],
 			},
 		],
 	},
 	{
-		title: "About Us",
-		url: "/about-us",
-	},
-	{
-		title: "Pages",
+		title: "Solutions",
 		url: "#",
 		submenu: [
 			{
-				title: "About Us",
-				url: "/about-us",
-			},
-			{
-				title: "Pricing",
-				url: "/pricing",
-			},
-			{
-				title: "Blog",
+				title: "Use Cases",
 				url: "#",
 				submenu: [
 					{
-						title: "Our Blog",
+						title: "Increase Sales on WhatsApp",
+						url: "#",
+					},
+					{
+						title: "Customer Support Automation",
+						url: "#",
+					},
+					{
+						title: "Payment Reminders & Collections",
+						url: "#",
+					},
+					{
+						title: "Appointment Booking & Reminders",
+						url: "#",
+					},
+					{
+						title: "Bulk Campaigns & Engagement",
+						url: "#",
+					},
+				],
+			},
+			{
+				title: "Industries",
+				url: "#",
+				submenu: [
+					{
+						title: "E-commerce",
+						url: "#",
+					},
+					{
+						title: "Healthcare",
+						url: "#",
+					},
+					{
+						title: "Education & Institutions",
+						url: "#",
+					},
+					{
+						title: "Manufacturing & Distributors",
+						url: "#",
+					},
+					{
+						title: "Gyms, PGs & Local Services",
+						url: "#",
+					},
+				],
+			},
+		],
+	},
+	{
+		title: "Pricing",
+		url: "/pricing",
+	},
+	{
+		title: "Resources",
+		url: "#",
+		submenu: [
+			{
+				title: "Learning",
+				url: "#",
+				submenu: [
+					{
+						title: "Blog",
 						url: "/blogs",
 					},
 					{
-						title: "Blog Details",
-						url: "single-blog",
+						title: "WhatsApp API Guide",
+						url: "/documentation",
+					},
+					{
+						title: "Templates Library",
+						url: "#",
+					},
+					{
+						title: "Case Studies",
+						url: "#",
 					},
 				],
 			},
 			{
-				title: "Service",
+				title: "Support & Dev",
 				url: "#",
 				submenu: [
 					{
-						title: "Service",
-						url: "service",
-					},
-					{
-						title: "Service Details",
-						url: "single-service",
-					},
-				],
-			},
-			{
-				title: "Team",
-				url: "#",
-				submenu: [
-					{
-						title: "Team",
-						url: "team",
-					},
-					{
-						title: "Team Details",
-						url: "single-team",
-					},
-				],
-			},
-			{
-				title: "Career",
-				url: "#",
-				submenu: [
-					{
-						title: "Career",
-						url: "career",
-					},
-					{
-						title: "Career Details",
-						url: "single-career",
-					},
-				],
-			},
-			{
-				title: "Portfolio",
-				url: "#",
-				submenu: [
-					{
-						title: "Our Portfolio",
-						url: "portfolio",
-					},
-
-					{
-						title: "Single Portfolio",
-						url: "single-portfolio",
-					},
-				],
-			},
-			{
-				title: "Utility",
-				url: "#",
-				submenu: [
-					{
-						title: "Faq",
+						title: "Help Center",
 						url: "/faq",
 					},
 					{
-						title: "Error 404",
-						url: "error-page",
-					},
-
-					{
-						title: "Coming Soon",
-						url: "coming-soon",
+						title: "Developer Documentation",
+						url: "/documentation",
 					},
 					{
-						title: "Terms & Condition",
-						url: "terms-and-condition",
-					},
-				],
-			},
-			{
-				title: "Account",
-				url: "#",
-				submenu: [
-					{
-						title: "Sign Up",
-						url: "/register",
+						title: "API Reference",
+						url: "/documentation",
 					},
 					{
-						title: "Sign In",
-						url: "/login",
-					},
-					{
-						title: "Reset Password",
-						url: "reset-password",
+						title: "System Status",
+						url: "#",
 					},
 				],
 			},
 		],
 	},
 	{
-		title: "Blog",
-		url: "/blogs",
+		title: "Partners",
+		url: "#",
 		submenu: [
 			{
-				title: "Blog",
-				url: "/blogs",
+				title: "Partner Program",
+				url: "/partner-program",
 			},
-
 			{
-				title: "Blog Details",
-				url: "single-blog",
+				title: "Become a Reseller",
+				url: "/become-a-reseller",
+			},
+			{
+				title: "Integrations",
+				url: "/integrations",
+			},
+			{
+				title: "Affiliate Program",
+				url: "/affiliate-program",
 			},
 		],
-	},
-	{
-		title: "Contact Us",
-		url: "/contact",
 	},
 ];

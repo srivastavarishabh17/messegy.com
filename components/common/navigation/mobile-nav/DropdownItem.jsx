@@ -42,8 +42,8 @@ const DropdownItem = ({ items, depthLevel, showMenu, setShowMenu }) => {
 				<motion.svg
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 320 512"
-					width="16"
-					height="16"
+					width="20"
+					height="20"
 					className="arrow-down-icon"
 					variants={animationVariants}
 					initial="initial"

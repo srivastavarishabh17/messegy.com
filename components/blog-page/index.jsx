@@ -2,6 +2,8 @@ import Categories from "./Categories";
 import RecentPosts from "./RecentPosts";
 import Search from "./Search";
 import Tags from "./Tags";
+import CategoryFilter from "./CategoryFilter";
+import LanguageSelector from "./LanguageSelector";
 
 import blogThumb1 from "@/public/images/blog/blogthumb1.png";
 import blogThumb2 from "@/public/images/blog/blogthumb2.png";
@@ -57,10 +59,8 @@ function Blog() {
 					<div className="col-lg-4">
 						<div className="sofax-inner-blog-sidebar-menu">
 							<Search />
-							<Categories />
-							<RecentPosts />
-							<Tags />
-							<NewsLetter />
+							<CategoryFilter />
+							<LanguageSelector />
 						</div>
 					</div>
 				</div>

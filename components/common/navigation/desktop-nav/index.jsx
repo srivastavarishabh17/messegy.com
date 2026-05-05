@@ -2,37 +2,111 @@ import DesktopNav from "./DesktopNav";
 import Dropdown from "./Dropdown";
 import DropdownItem from "./DropdownItem";
 import NavItem from "./NavItem";
+import { FaBlog, FaBook, FaFileAlt, FaChartBar, FaQuestionCircle, FaCode, FaBookOpen, FaServer, FaHandshake, FaStore, FaPlug, FaUserFriends } from "react-icons/fa";
 function DesktopMenu() {
 	return (
 		<DesktopNav>
 
-			<NavItem url="/">Home</NavItem>
-			<NavItem url="/about-us">About Us</NavItem>
-			<NavItem url="/pricing">Pricing</NavItem>
-			<NavItem dropdown title="Pages">
+			<NavItem dropdown title="Products">
 				<Dropdown>
 					<div className="dropdown-content">
-						<div className="promo-container">
-							<div className="promo-left">
-								<DropdownItem url="/">Home</DropdownItem>
-								<DropdownItem url="/about-us">About Us</DropdownItem>
-								<DropdownItem url="/pricing">Pricing</DropdownItem>
-								<DropdownItem url="/blogs">Blog</DropdownItem>
-								<DropdownItem url="/contact">Contact Us</DropdownItem>
+						<div className="products-container">
+							<div className="products-column">
+								<h4 className="column-title">Core Platform</h4>
+								<DropdownItem url="/whatsapp-business-api">WhatsApp Business API</DropdownItem>
+								<DropdownItem url="/whatsapp-cloud-hosting">WhatsApp Cloud Hosting</DropdownItem>
+								<DropdownItem url="/shared-team-inbox">Shared Team Inbox</DropdownItem>
 							</div>
-							<div className="promo-right">
-								<div className="promo-content">
-									<h3>See Messegy In Action With A Personalized Demo!</h3>
-									<p>Discover how our WhatsApp Business Platform can transform your customer communication</p>
-									<button className="promo-button">Book Now</button>
-								</div>
-								<img src="/images/about/aboutthumb.png" alt="Pages" className="promo-image" />
+							<div className="products-column">
+								<h4 className="column-title">Marketing</h4>
+								<DropdownItem url="/campaigns-broadcast">Campaigns / Broadcast</DropdownItem>
+								<DropdownItem url="/click-to-whatsapp-ads">Click-to-WhatsApp Ads</DropdownItem>
+								<DropdownItem url="/whatsapp-link-generator">WhatsApp Link Generator</DropdownItem>
+							</div>
+							<div className="products-column">
+								<h4 className="column-title">Automation</h4>
+								<DropdownItem url="/chatbot-builder">Chatbot Builder</DropdownItem>
+								<DropdownItem url="/ai-auto-replies">AI Auto Replies</DropdownItem>
+								<DropdownItem url="/whatsapp-button-generator">WhatsApp Button Generator</DropdownItem>
 							</div>
 						</div>
 					</div>
 				</Dropdown>
 			</NavItem>
-			<NavItem url="/blogs">Blog</NavItem>
+			<NavItem dropdown title="Solutions">
+				<Dropdown>
+					<div className="dropdown-content">
+						<div className="solutions-container">
+							<div className="solutions-column">
+								<h4 className="column-title">Use Cases</h4>
+								<DropdownItem url="#" description="Lead conversion, cart recovery, follow-ups">Increase Sales on WhatsApp</DropdownItem>
+								<DropdownItem url="#" description="Auto replies, FAQs, ticket handling">Customer Support Automation</DropdownItem>
+								<DropdownItem url="#" description="Automated dues, confirmations">Payment Reminders & Collections</DropdownItem>
+								<DropdownItem url="#" description="Doctors, gyms, services">Appointment Booking & Reminders</DropdownItem>
+								<DropdownItem url="#" description="Offers, updates, re-engagement">Bulk Campaigns & Engagement</DropdownItem>
+							</div>
+							<div className="solutions-column">
+								<h4 className="column-title">Industries</h4>
+								<DropdownItem url="#">E-commerce</DropdownItem>
+								<DropdownItem url="#" description="Clinics, Doctors">Healthcare</DropdownItem>
+								<DropdownItem url="#">Education & Institutions</DropdownItem>
+								<DropdownItem url="#">Manufacturing & Distributors</DropdownItem>
+								<DropdownItem url="#">Gyms, PGs & Local Services</DropdownItem>
+							</div>
+							<div className="solutions-column">
+								<img src="/images/dropdownimg.png" alt="Demo" className="promo-image" />
+							</div>
+						</div>
+					</div>
+				</Dropdown>
+			</NavItem>
+			<NavItem url="/pricing">Pricing</NavItem>
+			<NavItem dropdown title="Resources">
+				<Dropdown>
+					<div className="dropdown-content">
+						<div className="resources-container">
+							<div className="resources-column">
+								<h4 className="column-title">Learning</h4>
+								<DropdownItem url="/blogs" icon={<FaBlog />}>Blog</DropdownItem>
+								<DropdownItem url="/documentation" icon={<FaBook />}>WhatsApp API Guide</DropdownItem>
+								<DropdownItem url="#" icon={<FaFileAlt />}>Templates Library</DropdownItem>
+								<DropdownItem url="#" icon={<FaChartBar />}>Case Studies</DropdownItem>
+							</div>
+							<div className="resources-column">
+								<h4 className="column-title">Support & Dev</h4>
+								<DropdownItem url="/faq" icon={<FaQuestionCircle />}>Help Center</DropdownItem>
+								<DropdownItem url="/documentation" icon={<FaCode />}>Developer Documentation</DropdownItem>
+								<DropdownItem url="/documentation" icon={<FaBookOpen />}>API Reference</DropdownItem>
+								<DropdownItem url="#" icon={<FaServer />}>System Status</DropdownItem>
+							</div>
+						</div>
+					</div>
+				</Dropdown>
+			</NavItem>
+			<NavItem dropdown title="Partners">
+				<Dropdown>
+					<div className="dropdown-content">
+						<div className="resources-container">
+							<div className="resources-column">
+								<h4 className="column-title">Partner Options</h4>
+								<DropdownItem url="/partner-program" icon={<FaHandshake />}>Partner Program</DropdownItem>
+								<DropdownItem url="/become-a-reseller" icon={<FaStore />}>Become a Reseller</DropdownItem>
+								<DropdownItem url="/integrations" icon={<FaPlug />}>Integrations</DropdownItem>
+								<DropdownItem url="/affiliate-program" icon={<FaUserFriends />}>Affiliate Program</DropdownItem>
+							</div>
+							<div className="resources-column">
+								<div className="promo-content" style={{ padding: '20px' }}>
+									<h3>Grow With Messegy</h3>
+									<p>Join our partner ecosystem and unlock new revenue streams with WhatsApp Business solutions.</p>
+									<a href="/contact" className="sofax-default-btn pill">
+										<span className="button-wraper">Become a Partner</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</Dropdown>
+			</NavItem>
 			{/* <NavItem dropdown title="Pages">
 				<Dropdown>
 					<DropdownItem url="about-us">About Us</DropdownItem>
@@ -84,8 +158,6 @@ function DesktopMenu() {
 					</DropdownItem>
 				</Dropdown>
 			</NavItem> */}
-
-			<NavItem url="/contact">Contact Us</NavItem>
 		</DesktopNav>
 	);
 }

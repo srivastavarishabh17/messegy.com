@@ -70,8 +70,8 @@ export default function WhatsAppPricing() {
         <div className="row justify-content-center">
           <div className="col-lg-8">
             <div className="section-title text-center mb-5">
-              <h2>Choose Your Plan</h2>
-              <p>Select the perfect plan for your WhatsApp marketing needs</p>
+              <h2 className="main-heading">Choose Your Plan</h2>
+              <p className="sub-heading">Select the perfect plan for your WhatsApp marketing needs</p>
             </div>
           </div>
         </div>
@@ -146,8 +146,23 @@ export default function WhatsAppPricing() {
                   <Link 
                     href={plan.cta.href} 
                     className={`btn ${plan.highlighted ? 'btn-primary' : 'btn-outline-primary'} w-100`}
+                    style={{
+                      display: 'inline-block',
+                      padding: '14px 28px',
+                      borderRadius: '12px',
+                      textDecoration: 'none',
+                      fontWeight: '600',
+                      textAlign: 'center',
+                      transition: 'all 0.3s ease',
+                      border: plan.highlighted ? '2px solid transparent' : '2px solid #667eea',
+                      fontSize: '0.95rem',
+                      letterSpacing: '0.5px',
+                      background: plan.highlighted ? 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' : 'transparent',
+                      color: plan.highlighted ? 'white' : '#667eea',
+                      boxShadow: plan.highlighted ? '0 4px 15px rgba(102, 126, 234, 0.3)' : 'none'
+                    }}
                   >
-                    {plan.cta.text}
+                    {plan.cta.text.toUpperCase()}
                   </Link>
                 </div>
               </div>
@@ -195,51 +210,62 @@ export default function WhatsAppPricing() {
         
         .savings-badge {
           position: absolute;
-          top: -8px;
-          right: -10px;
-          background: #28a745;
+          top: -12px;
+          right: -35px;
+          background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
           color: white;
-          font-size: 0.7rem;
-          padding: 2px 6px;
-          border-radius: 10px;
+          font-size: 0.65rem;
+          padding: 4px 8px;
+          border-radius: 12px;
           font-weight: 700;
           white-space: nowrap;
+          box-shadow: 0 2px 8px rgba(40, 167, 69, 0.4);
+          z-index: 10;
         }
         
-        .section-title h2 {
-          font-size: 2.5rem;
-          font-weight: 700;
-          margin-bottom: 1rem;
-          color: #1a1a1a;
+        .main-heading {
+          font-size: 3rem;
+          font-weight: 800;
+          margin-bottom: 0.75rem;
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          letter-spacing: -0.5px;
+          line-height: 1.2;
         }
         
-        .section-title p {
-          font-size: 1.1rem;
+        .sub-heading {
+          font-size: 1.25rem;
           color: #6c757d;
+          font-weight: 400;
+          margin-top: 0.5rem;
         }
         
         .pricing-card {
           background: white;
-          border-radius: 12px;
-          padding: 2rem;
-          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+          border-radius: 16px;
+          padding: 2.5rem;
+          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
           transition: all 0.3s ease;
           position: relative;
           border: 2px solid transparent;
         }
         
         .pricing-card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+          transform: translateY(-8px);
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+          border-color: #667eea;
         }
         
         .pricing-card.featured {
-          border-color: #007bff;
-          transform: scale(1.05);
+          border-color: #667eea;
         }
         
         .pricing-card.featured:hover {
-          transform: scale(1.05) translateY(-5px);
+          transform: translateY(-8px);
+          box-shadow: 0 20px 40px rgba(102, 126, 234, 0.25);
+          border-color: #764ba2;
         }
         
         .badge-popular {
@@ -282,13 +308,19 @@ export default function WhatsAppPricing() {
         .currency {
           font-size: 1.5rem;
           font-weight: 600;
-          color: #007bff;
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
         }
         
         .amount {
           font-size: 3rem;
           font-weight: 700;
-          color: #1a1a1a;
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
         }
         
         .period {
@@ -331,35 +363,40 @@ export default function WhatsAppPricing() {
         
         .btn {
           display: inline-block;
-          padding: 12px 24px;
-          border-radius: 8px;
+          padding: 14px 28px;
+          border-radius: 12px;
           text-decoration: none;
           font-weight: 600;
           text-align: center;
           transition: all 0.3s ease;
           border: 2px solid transparent;
+          font-size: 0.95rem;
+          letter-spacing: 0.5px;
         }
         
         .btn-primary {
           background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
           color: white;
+          box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
         }
         
         .btn-primary:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+          transform: translateY(-3px);
+          box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
         }
         
         .btn-outline-primary {
           background: transparent;
-          color: #007bff;
-          border-color: #007bff;
+          color: #667eea;
+          border-color: #667eea;
         }
         
         .btn-outline-primary:hover {
-          background: #007bff;
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
           color: white;
-          transform: translateY(-2px);
+          border-color: transparent;
+          transform: translateY(-3px);
+          box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
         }
         
         @media (max-width: 768px) {
@@ -367,8 +404,12 @@ export default function WhatsAppPricing() {
             padding: 60px 0;
           }
           
-          .section-title h2 {
-            font-size: 2rem;
+          .main-heading {
+            font-size: 2.25rem;
+          }
+          
+          .sub-heading {
+            font-size: 1.1rem;
           }
           
           .pricing-card.featured {
@@ -381,6 +422,11 @@ export default function WhatsAppPricing() {
           
           .amount {
             font-size: 2.5rem;
+          }
+          
+          .toggle-btn {
+            padding: 10px 20px;
+            font-size: 0.9rem;
           }
         }
       `}</style>

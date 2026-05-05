@@ -7,13 +7,13 @@ import { menuItemsData } from "@/components/common/navigation/mobile-nav/menuIte
 import MobileNavbar from "@/components/common/navigation/mobile-nav/MobileNavbar";
 import HeaderButton from "./HeaderButton";
 import HeaderLogo from "./HeaderLogo";
-import { FaWhatsapp, FaRobot, FaBullhorn, FaChartLine, FaUsers, FaCog, FaHandshake, FaBook } from 'react-icons/fa';
+import { FaWhatsapp, FaRobot, FaBullhorn, FaChartLine, FaUsers, FaCog, FaHandshake, FaBook, FaBlog, FaChartBar, FaBookOpen, FaQuestionCircle } from 'react-icons/fa';
 
 function Header() {
   const [isProductsOpen, setIsProductsOpen] = useState(false);
 
   return (
-    <header className="site-header site-header--menu-center bg-white border-b border-gray-200 sticky top-0 z-50" id="sticky-menu">
+    <header className="site-header site-header--menu-center bg-white sticky top-0 z-50" id="sticky-menu">
       <div className="container mx-auto px-4">
         <nav className="navbar flex items-center justify-between">
           {/* Logo */}
@@ -72,40 +72,47 @@ function Header() {
             <NavItem title="Integrations" url="#" />
             <NavItem title="Pricing" url="/pricing" />
             <NavItem title="Partnerships" url="#" />
-            <NavItem dropdown title="Resources">
+            <NavItem dropdown title="Resources" pill>
               <Dropdown>
                 <div className="dropdown-content">
                   <div className="promo-container">
                     <div className="promo-left">
-                      <h4 style={{ fontSize: '18px', fontWeight: '700', marginBottom: '20px', color: 'var(--heading-color)' }}>Resources</h4>
                       <div className="sub-menu--item">
                         <a href="/blogs">
-                          <span className="dropdown-icon"><FaBook /></span>
-                          <span className="menu-item-text">Blog</span>
+                          <span className="dropdown-icon"><FaBlog /></span>
+                          <span className="menu-item-text">Blogs</span>
                         </a>
                       </div>
                       <div className="sub-menu--item">
-                        <a href="/documentation">
-                          <span className="dropdown-icon"><FaChartLine /></span>
-                          <span className="menu-item-text">Documentation</span>
+                        <a href="/case-studies">
+                          <span className="dropdown-icon"><FaChartBar /></span>
+                          <span className="menu-item-text">Case Studies</span>
                         </a>
                       </div>
                       <div className="sub-menu--item">
-                        <a href="/testimonials">
-                          <span className="dropdown-icon"><FaUsers /></span>
-                          <span className="menu-item-text">Testimonials</span>
+                        <a href="/resource-center">
+                          <span className="dropdown-icon"><FaBookOpen /></span>
+                          <span className="menu-item-text">Resource Center</span>
+                        </a>
+                      </div>
+                      <div className="sub-menu--item">
+                        <a href="/faqs">
+                          <span className="dropdown-icon"><FaQuestionCircle /></span>
+                          <span className="menu-item-text">FAQs</span>
                         </a>
                       </div>
                     </div>
-                    <div className="promo-right">
+                    <div className="promo-right resources-promo">
                       <div className="promo-content">
-                        <h3>Learn & Grow with Messegy</h3>
-                        <p>Access guides, case studies, and best practices to maximize your WhatsApp marketing success.</p>
-                        <button className="promo-button" onClick={() => window.location.href = '/blogs'}>
-                          Explore Resources
-                        </button>
+                        <h3>See Messegy In Action With A Personalized Demo!</h3>
+                        <a href="/contact" className="promo-link">
+                          Book Now <span className="promo-arrow">→</span>
+                        </a>
                       </div>
-                      <img src="/images/blog/blog-thumb-1.jpg" alt="Messegy Resources" className="promo-image" />
+                      <div className="promo-images">
+                        <img src="/images/v1/dashboard.png" alt="Messegy Dashboard" className="promo-float-img img-1" />
+                        <img src="/images/about/aboutthumb.png" alt="Messegy Platform" className="promo-float-img img-2" />
+                      </div>
                     </div>
                   </div>
                 </div>
