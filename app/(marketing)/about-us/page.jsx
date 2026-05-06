@@ -1,5 +1,5 @@
 "use client";
-import Career from "@/components/career-page";
+import AboutUs from "@/components/AboutUs";
 import Header from "@/components/home/home-one/header/multi-page";
 import Footer from "@/components/home/home-one/footer/index";
 import BreadCrumb from "@/components/common/Breadcrumb";
@@ -9,7 +9,7 @@ export default function AboutPage() {
     <>
       <Header />
       <BreadCrumb title="About Us" />
-      <Career />
+      <AboutUs />
       <Footer />
     </>
   );

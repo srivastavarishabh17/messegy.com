@@ -2,7 +2,9 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import Head from 'next/head';
-import { FaStar, FaBuilding, FaCheckCircle } from 'react-icons/fa';
+import { FaPlay } from 'react-icons/fa';
+import Image from 'next/image';
+import DashboardImg from '@/public/images/v7/deshbordv7.png';
 
 const containerVariants = {
 	hidden: { opacity: 0 },
@@ -111,7 +113,7 @@ function HeroContent() {
 					flexDirection: "column",
 					justifyContent: "center",
 					alignItems: "center",
-					background: "#ffffff",
+background: "#ffffff",
 				}}
 			>
 			
@@ -120,50 +122,23 @@ function HeroContent() {
 					id="hero-heading"
 					variants={textVariants}
 					style={{
-						fontSize: isUltraWide ? "clamp(3.5rem, 5vw, 4.5rem)" : isLargeScreen ? "clamp(3rem, 4.5vw, 4rem)" : screenSize.width < 768 ? "clamp(2rem, 8vw, 2.5rem)" : "clamp(2.5rem, 5vw, 3.5rem)",
+						fontSize: isUltraWide ? "clamp(5rem, 7vw, 7rem)" : isLargeScreen ? "clamp(4rem, 6vw, 5.5rem)" : screenSize.width < 768 ? "clamp(2.5rem, 11vw, 3.5rem)" : "clamp(3.5rem, 8vw, 5rem)",
 						fontWeight: "800",
-						lineHeight: "1.15",
-						marginBottom: isUltraWide ? "1.5rem" : screenSize.width < 768 ? "1rem" : "1.25rem",
-						color: "#1a1a1a",
-						letterSpacing: "-0.03em",
-						maxWidth: "850px",
-						margin: "0 auto 1.5rem",
+						lineHeight: "1.05",
+						marginBottom: isUltraWide ? "2rem" : screenSize.width < 768 ? "1.25rem" : "1.75rem",
+						color: "#0a0a0a",
+						letterSpacing: "-0.02em",
+						width: "100%",
+						maxWidth: "none",
+						padding: "0 3%",
+						margin: "0 auto 2rem",
 						position: "relative",
 						zIndex: 2,
 						fontFamily: "var(--font-DM-Sans), sans-serif",
+						textAlign: "center",
 					}}
 				>
-					<span style={{ display: "inline" }}>The #1 </span>
-					<motion.span
-						style={{ 
-							display: "inline",
-							background: "#00d26a",
-							color: "#1a1a1a",
-							padding: "0.15rem 0.6rem",
-							borderRadius: "12px",
-							fontWeight: "800",
-							marginRight: "0.2rem",
-						}}
-						variants={textVariants}
-					>
-						WhatsApp
-					</motion.span>
-					<br style={{ display: screenSize.width < 640 ? "none" : "block" }} />
-					<motion.span
-						style={{ 
-							display: "inline",
-							background: "#00d26a",
-							color: "#1a1a1a",
-							padding: "0.15rem 0.6rem",
-							borderRadius: "12px",
-							fontWeight: "800",
-							marginRight: "0.2rem",
-						}}
-						variants={textVariants}
-					>
-						Business Messaging
-					</motion.span>
-					<span style={{ display: "inline" }}>Platform</span>
+					Discover the power<br />of Messegy AI platform
 				</motion.h1>
 			</motion.header>
 
@@ -171,18 +146,21 @@ function HeroContent() {
 				id="hero-description"
 				variants={textVariants}
 				style={{
-					fontSize: isUltraWide ? "22px" : isLargeScreen ? "20px" : screenSize.width < 768 ? "17px" : "19px",
+					fontSize: isUltraWide ? "24px" : isLargeScreen ? "22px" : screenSize.width < 768 ? "18px" : "21px",
 					color: "#4a4a4a",
-					maxWidth: "650px",
-					margin: "0 auto 2rem",
-					lineHeight: "1.5",
-					fontWeight: "500",
+					width: "100%",
+					maxWidth: "1400px",
+					padding: "0 5%",
+					margin: "0 auto 2.5rem",
+					lineHeight: "1.6",
+					fontWeight: "400",
 					position: "relative",
 					zIndex: 2,
 					fontFamily: "var(--font-DM-Sans), sans-serif",
+					textAlign: "center",
 				}}
 			>
-				Automate conversations, capture leads & grow 3x faster with Messegy
+				AI platforms provide powerful analytics capabilities, enabling businesses to gain deep insights from their data. This includes predictive analytics, which can forecast trends and behaviors and prescriptive analytics.
 			</motion.p>
 
 			<motion.nav
@@ -206,10 +184,10 @@ function HeroContent() {
 					}}
 					whileTap={{ scale: 0.98 }}
 					style={{
-						background: "#1a1a1a",
-						color: "#ffffff",
-						padding: screenSize.width < 768 ? "14px 28px" : "16px 32px",
-						borderRadius: "8px",
+						background: "#e0aaff",
+						color: "#0a0a0a",
+						padding: screenSize.width < 768 ? "14px 24px" : "16px 28px",
+						borderRadius: "50px",
 						border: "none",
 						fontSize: screenSize.width < 768 ? "15px" : "16px",
 						fontWeight: "600",
@@ -219,96 +197,61 @@ function HeroContent() {
 					onClick={() => window.location.href = '/auth/register'}
 					aria-label="Start free 14-day trial - no credit card required"
 				>
-					Start Free 14-Day Trial
+					Start Free Trial
 				</motion.button>
 
 				<motion.button
-					whileHover={{ 
+					whileHover={{
 						scale: 1.02,
-						background: "#f5f5f5",
 					}}
 					whileTap={{ scale: 0.98 }}
 					style={{
-						background: "transparent",
-						color: "#1a1a1a",
-						padding: screenSize.width < 768 ? "14px 28px" : "16px 32px",
-						borderRadius: "8px",
-						border: "1px solid #d0d0d0",
+						background: "#0a0a0a",
+						color: "#ffffff",
+						padding: screenSize.width < 768 ? "14px 24px" : "16px 28px",
+						borderRadius: "50px",
+						border: "none",
 						fontSize: screenSize.width < 768 ? "15px" : "16px",
 						fontWeight: "600",
 						cursor: "pointer",
 						transition: "all 0.2s ease",
+						display: "flex",
+						alignItems: "center",
+						gap: "8px",
 					}}
 					onClick={() => window.location.href = '/contact'}
-					aria-label="Book a demo with Messegy team"
+					aria-label="Schedule a demo with Messegy team"
 				>
-					Book a Demo
+					<FaPlay size={14} />
+					Schedule Demo
 				</motion.button>
 			</motion.nav>
 
-			{/* Trust Badges */}
+			{/* Dashboard Preview Image */}
 			<motion.div
 				variants={textVariants}
 				style={{
-					display: "flex",
-					gap: isUltraWide ? "2rem" : isLargeScreen ? "1.5rem" : screenSize.width < 768 ? "1rem" : "1.25rem",
-					justifyContent: "center",
-					alignItems: "center",
-					flexWrap: screenSize.width < 640 ? "wrap" : "nowrap",
+					width: "100%",
+					maxWidth: "1200px",
+					margin: "2rem auto 0",
+					padding: "0 20px",
 					position: "relative",
 					zIndex: 2,
 				}}
 			>
-				<motion.div
+				<Image
+					src={DashboardImg}
+					alt="Messegy Dashboard Preview"
 					style={{
-						display: "flex",
-						alignItems: "center",
-						gap: "0.4rem",
-						color: "#666",
-						fontSize: screenSize.width < 768 ? "14px" : "15px",
-						fontWeight: "500",
+						width: "100%",
+						height: "auto",
+						borderRadius: "12px",
+						boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.15)",
 					}}
-					whileHover={{ scale: 1.05 }}
-					transition={{ duration: 0.2 }}
-				>
-					<FaStar style={{ color: "#f5a623" }} />
-					4.8/5 Rating
-				</motion.div>
-				
-				<motion.div
-					style={{
-						display: "flex",
-						alignItems: "center",
-						gap: "0.4rem",
-						color: "#666",
-						fontSize: screenSize.width < 768 ? "14px" : "15px",
-						fontWeight: "500",
-					}}
-					whileHover={{ scale: 1.05 }}
-					transition={{ duration: 0.2 }}
-				>
-					<FaBuilding style={{ color: "#00d26a" }} />
-					1600+ Businesses
-				</motion.div>
-				
-				<motion.div
-					style={{
-						display: "flex",
-						alignItems: "center",
-						gap: "0.4rem",
-						color: "#666",
-						fontSize: screenSize.width < 768 ? "14px" : "15px",
-						fontWeight: "500",
-					}}
-					whileHover={{ scale: 1.05 }}
-					transition={{ duration: 0.2 }}
-				>
-					<FaCheckCircle style={{ color: "#00d26a" }} />
-					Official WhatsApp Business API
-				</motion.div>
+					priority
+				/>
 			</motion.div>
 
-			
 		</motion.div>
 		</>
 	);

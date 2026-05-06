@@ -82,30 +82,12 @@ body {
 	text-rendering: optimizeLegibility;
 	font-weight: 400;
 	overflow-x: hidden;
-	background: 
-		linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 244, 255, 0.98) 50%, rgba(255, 255, 255, 0.95) 100%),
-		radial-gradient(circle at 20% 20%, rgba(229, 171, 243, 0.03) 0%, transparent 50%),
-		radial-gradient(circle at 80% 80%, rgba(229, 171, 243, 0.02) 0%, transparent 50%);
+	background: #ffffff;
 	background-attachment: fixed;
 	counter-reset: my-sec-counter;
 	font-size: 20px;
 	line-height: 30px;
 	position: relative;
-}
-
-body::before {
-	content: '';
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-image: 
-		linear-gradient(rgba(229, 171, 243, 0.01) 1px, transparent 1px),
-		linear-gradient(90deg, rgba(229, 171, 243, 0.01) 1px, transparent 1px);
-	background-size: 60px 60px;
-	pointer-events: none;
-	z-index: -1;
 }
 
 body.styleguide {
@@ -4005,11 +3987,11 @@ h1.post__title {
 }
 
 .sofax-counter-data h2 {
-	color: var(--white-bg);
+	color: #000;
 }
 
 .sofax-counter-data p {
-	color: var(--white-bg);
+	color: #000;
 }
 
 .sofax-counter-wrap-v5 {
@@ -4146,6 +4128,19 @@ h1.post__title {
 
 .sofax-counter-data-v7 h2 {
 	margin-bottom: 5px !important;
+	color: #000;
+}
+
+.sofax-counter-data-v7 p {
+	color: #000;
+}
+
+.sofax-counter-data-v5 h2 {
+	color: #000;
+}
+
+.sofax-counter-data-v5 p {
+	color: #000;
 }
 
 @media (max-width: 425px) {
@@ -9960,6 +9955,188 @@ button#sofax-submit-btn:hover {
 @media (max-width: 768px) {
 	.site-header .navbar {
 		padding: 0 12px;
+	}
+}
+
+/* Statistics Section Styles */
+.statistics-top-box {
+	background-color: #e8f5e8;
+	border-radius: 20px;
+	padding: 50px 40px;
+	margin-bottom: 30px;
+}
+
+.statistics-header {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.statistics-header h2 {
+	font-size: 32px;
+	font-weight: 700;
+	color: #0e0e0e;
+	margin-bottom: 12px;
+	font-family: var(--font-inter);
+	letter-spacing: -0.5px;
+}
+
+.statistics-header p {
+	font-size: 18px;
+	color: #3c3c3c;
+	margin: 0;
+	font-family: var(--font-inter);
+	letter-spacing: 0.2px;
+}
+
+.statistics-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 0;
+	position: relative;
+	align-items: center;
+}
+
+.stat-item {
+	text-align: center;
+	padding: 30px 20px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.stat-item:not(:last-child)::after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 70%;
+	width: 1px;
+	border-right: 2px dashed #10b981;
+}
+
+.stat-percentage {
+	display: block;
+	font-size: 42px;
+	font-weight: 700;
+	color: #0e0e0e;
+	margin-bottom: 12px;
+	font-family: var(--font-inter);
+	letter-spacing: -1px;
+	line-height: 1;
+}
+
+.stat-label {
+	display: block;
+	font-size: 15px;
+	color: #3c3c3c;
+	line-height: 1.5;
+	font-family: var(--font-inter);
+	letter-spacing: 0.1px;
+	word-spacing: 0.5px;
+}
+
+.statistics-tagline {
+	text-align: center;
+	margin-bottom: 60px;
+	padding: 0 20px;
+}
+
+.statistics-tagline p {
+	font-size: 18px;
+	color: #3c3c3c;
+	margin: 0;
+	font-weight: 500;
+	font-family: var(--font-inter);
+	letter-spacing: 0.2px;
+	line-height: 1.6;
+}
+
+.statistics-bottom {
+	padding: 30px 0;
+}
+
+.bottom-stat-item {
+	text-align: center;
+	padding: 40px 25px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.bottom-stat-number {
+	display: block;
+	font-size: 56px;
+	font-weight: 700;
+	color: #10b981;
+	margin-bottom: 12px;
+	font-family: var(--font-inter);
+	letter-spacing: -1.5px;
+	line-height: 1;
+}
+
+.bottom-stat-label {
+	display: block;
+	font-size: 16px;
+	color: #3c3c3c;
+	line-height: 1.5;
+	font-family: var(--font-inter);
+	letter-spacing: 0.1px;
+	word-spacing: 0.5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+	.statistics-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+	}
+
+	.stat-item:not(:last-child)::after {
+		display: none;
+	}
+
+	.stat-item:nth-child(2)::after {
+		display: none;
+	}
+}
+
+@media (max-width: 767px) {
+	.statistics-top-box {
+		padding: 30px 20px;
+		border-radius: 16px;
+	}
+
+	.statistics-header h2 {
+		font-size: 24px;
+	}
+
+	.statistics-grid {
+		grid-template-columns: 1fr;
+		gap: 15px;
+	}
+
+	.stat-item {
+		padding: 15px 10px;
+	}
+
+	.stat-item:not(:last-child)::after {
+		display: none;
+	}
+
+	.stat-percentage {
+		font-size: 32px;
+	}
+
+	.bottom-stat-number {
+		font-size: 40px;
+	}
+
+	.bottom-stat-item {
+		padding: 20px 15px;
 	}
 }
 

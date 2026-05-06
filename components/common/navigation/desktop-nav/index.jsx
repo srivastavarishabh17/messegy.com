@@ -95,7 +95,8 @@ function DesktopMenu() {
 								<DropdownItem url="/affiliate-program" icon={<FaUserFriends />}>Affiliate Program</DropdownItem>
 							</div>
 							<div className="resources-column">
-								<div className="promo-content" style={{ padding: '20px' }}>
+								<img src="/images/dropdownimg.png" alt="Partner Program" className="promo-image" />
+								<div className="promo-content" style={{ padding: '20px', marginTop: '20px' }}>
 									<h3>Grow With Messegy</h3>
 									<p>Join our partner ecosystem and unlock new revenue streams with WhatsApp Business solutions.</p>
 									<a href="/contact" className="sofax-default-btn pill">
