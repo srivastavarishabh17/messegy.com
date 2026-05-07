@@ -6,6 +6,7 @@ import Services from "@/components/home/home-one/services/index";
 import WhatsAppChannels from "@/components/home/home-one/whatsapp-channels/index";
 import PricePlan from "@/components/home/home-one/price-plan/index";
 import Integrations from "@/components/home/home-one/integrations/index";
+import SecureSolutions from "@/components/home/home-one/secure-solutions/index";
 import Testimonial from "@/components/home/home-one/testimonial/index";
 import Blog from "@/components/home/home-one/blog/index";
 import LogoSlider from "@/components/home/home-one/logo-slider/index";
@@ -25,6 +26,7 @@ export default function HomePage() {
       <WhyChooseUs />
       <PricePlan />
       <Integrations />
+      <SecureSolutions />
       <Testimonial />
       <Blog />
       <Cta />
