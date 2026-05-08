@@ -3,8 +3,8 @@ import Image from "next/image";
 function FaqAccordion() {
 	return (
 		<div className="sofax-accordion-section-wrapper">
-			<div className="accordion sofax-accordion-section-v2" id="sofax-accordion2">
-				<div className="accordion-item sofax-accordion-item ">
+			<div className="accordion sofax-accordion-section-v2 w-full" id="sofax-accordion2">
+				<div className="accordion-item sofax-accordion-item w-full">
 					<h3 className="accordion-header sofax-accordion-header">
 						<button
 							className="accordion-button"
