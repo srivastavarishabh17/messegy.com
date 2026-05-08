@@ -213,7 +213,7 @@ export default function BlogDetailsPage() {
 					>
 
 						<Image
-							src={blog.og_image}
+							src={blog.og_image ?? 'https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1200&auto=format&fit=crop'}
 							alt={blog.title}
 							fill
 							style={{
