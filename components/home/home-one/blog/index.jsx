@@ -1,107 +1,51 @@
-"use client";
-import ArrowRight from "@/public/images/v1/arrow-right.png";
+import Thumb1 from "@/public/images/v4/bloghtumb1.png";
+import Thumb2 from "@/public/images/v4/bloghtumb2.png";
+import Thumb3 from "@/public/images/v4/bloghtumb3.png";
+import Shape12 from "@/public/images/v4/shape12.png";
 import Image from "next/image";
-import Link from "next/link";
-import { useState, useEffect } from "react";
+import FadeInStagger from "../../../animation/FadeInStagger";
+import BlogCard from "./BlogCard";
 
-const blogData = [
+const blogsData = [
 	{
-		id: 1,
-		image: "/images/blog/blogthumb1.png",
+		id: crypto.randomUUID(),
+		image: Thumb1,
 		category: "Advertising",
-		date: "March 15, 2024",
-		title: "How to Create Effective Ad Campaigns That Convert",
-		description: "Learn the secrets behind creating advertising campaigns that not only grab attention but drive real results for your business.",
+		date: "15 March 2024",
+		title: "Target audience including interests behaviors and creating.",
 	},
 	{
-		id: 2,
-		image: "/images/blog/blogthumb2.png",
+		id: crypto.randomUUID(),
+		image: Thumb2,
 		category: "Social",
-		date: "March 12, 2024",
-		title: "Social Media Marketing Trends You Need to Know",
-		description: "Stay ahead of the curve with the latest social media marketing trends that can help your brand stand out in crowded feeds.",
+		date: "12 March 2024",
+		title: "How to optimize your campaigns to find out for your success",
 	},
 	{
-		id: 3,
-		image: "/images/blog/blogthumb3.png",
+		id: crypto.randomUUID(),
+		image: Thumb3,
 		category: "Promotion",
-		date: "March 10, 2024",
-		title: "Promotional Strategies That Actually Work",
-		description: "Discover proven promotional strategies that can help increase brand awareness and drive customer engagement effectively.",
+		date: "10 March 2024",
+		title: "A guide to sofax captivating to your audience social media",
 	},
 ];
-
-function BlogCard({ blog }) {
-	return (
-		<div className="col-lg-4 col-md-6 d-flex">
-			<div className="sofax-inner-blog-wrap h-100 d-flex flex-column">
-				<div className="sofax-inner-blog-img">
-					<Image src={blog.image} alt="blog thumb" width={400} height={250} />
-				</div>
-				<div className="sofax-inner-blog-content flex-grow-1 d-flex flex-column">
-					<div className="sofax-inner-blog-meta">
-						<Link href="/single-blog">
-							<h5>{blog.category}</h5>
-							<ul>
-								<li>{blog.date}</li>
-							</ul>
-						</Link>
-					</div>
-					<div className="sofax-inner-blog-text flex-grow-1">
-						<Link href="/single-blog">
-							<h3>{blog.title}</h3>
-						</Link>
-						<p>{blog.description}</p>
-					</div>
-					<div className="mt-auto">
-						<Link className="sofax-icon-btn sofax-blog-icon-btn" href="/single-blog">
-							Learn More <Image src={ArrowRight} alt="arrow right" width={20} height={20} />
-						</Link>
-					</div>
-				</div>
-			</div>
-		</div>
-	);
-}
-
 function Blog() {
-	const [screenWidth, setScreenWidth] = useState(0);
-
-	useEffect(() => {
-		const handleResize = () => setScreenWidth(window.innerWidth);
-		handleResize();
-		window.addEventListener('resize', handleResize);
-		return () => window.removeEventListener('resize', handleResize);
-	}, []);
-
-	const getFontSize = () => {
-		if (screenWidth < 350) return '1.2rem';
-		if (screenWidth < 400) return '1.4rem';
-		if (screenWidth < 480) return '1.6rem';
-		if (screenWidth < 600) return '2rem';
-		if (screenWidth < 768) return '2.5rem';
-		if (screenWidth < 1024) return '3rem';
-		return '3.5rem';
-	};
-
 	return (
-		<section className="sofax-section-padding2" id="blog">
+		<section className="section sofax-section-padding bg-light position-ralatiove" id="blog">
 			<div className="container">
-				<div className="sofax-section-title center" style={{ maxWidth: 'none' }}>
-					<div className="tg-heading-subheading animation-style3" style={{ maxWidth: 'none', margin: '0 auto', padding: '0' }}>
-						<h2 style={{
-							textAlign: 'center',
-							fontSize: getFontSize(),
-							lineHeight: '1.1',
-							letterSpacing: 'normal'
-						}}>
-							Latest news & tips<br />for optimal marketing
-						</h2>
+				<div className="sofax-section-title center max-width-large2 ">
+					<div className="tg-heading-subheading animation-style3">
+						<h2>The latest news & tips for optimal marketing</h2>
+					</div>
+					<div className="sofax-blog-shapev4">
+						<Image src={Shape12} alt="Shape" />
 					</div>
 				</div>
-				<div className="row g-4">
-					{blogData.map((blog) => (
-						<BlogCard key={blog.id} blog={blog} />
+				<div className="row">
+					{blogsData.map((blog, index) => (
+						<FadeInStagger key={blog.id} index={index} className="col-lg-4">
+							<BlogCard blog={blog} />
+						</FadeInStagger>
 					))}
 				</div>
 			</div>
